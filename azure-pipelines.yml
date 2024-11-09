@@ -7,7 +7,10 @@ trigger:
 - main
 
 pool:
-  vmImage: Default
+  name: "Default"
+  demands:
+    - agent.name -equals ONEL
+
 
 steps:
 - script: echo Hello, world!
